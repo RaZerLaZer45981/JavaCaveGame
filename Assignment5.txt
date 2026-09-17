@@ -1,0 +1,23 @@
+Seth Hall
+CS 67
+Assignment 5
+
+What I learned:
+
+The thing that instantly caught my eye was the keyword protected. Basically, it is used as another private keyword, but is used specifically
+for accessability in the package or a subclass. I didn't think this was good enough so I decided to look further and look for something else
+I haven't seen before. The extended keyword is the next thing that caught my eye. This keyword is used to create a version of a class already 
+made, where this new version can have the same methods and functions from the "parent" class. This is found in the Enemy.java file and the
+Player.java file where they both extend off of the character class. This is useful as instead of copying over the same methods and functions
+from the already made class, you can just extend them over into a new class without having to type it all out. 
+
+https://www.w3schools.com/java/ref_keyword_protected.asp
+https://www.w3schools.com/jsref/jsref_class_extends.asp
+
+Program Modification:
+
+What I decided to add is a critical hit system. I chose this change because I believe there should be some luck involved in the attacking.
+The best thing that I could think of to do this was to add a critical hit system. The only file that was modified was the player.java file
+where I added the import for random using Java.util.Random at the top and changed the attack method to have a chance for a critical hit.
+The only issue I ran into was figuring out why my code wasn't returning an int value. I just had to remember to add an else statement to 
+make sure weapon damage would eventually get returned.

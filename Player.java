@@ -1,5 +1,9 @@
 // Represents a player-controlled character.
 // Players can attack, defend, heal, and upgrade equipment.
+
+//added for the ability to create a random number
+import java.util.Random;
+
 public class Player extends Character {
 
     // Used to assign unique IDs to players
@@ -24,10 +28,24 @@ public class Player extends Character {
 
     // Returns the damage dealt by an attack
     public int attack() {
-        return weaponDamage;
+        //Creates the random capabilities
+        Random rand = new Random();
+
+        int randomnumber = rand.nextInt(21);
+
+        //checks to see if the random number is either a 19 or 20 and will double the damage delt if it is
+        if(randomnumber >= 19 && randomnumber < 21)
+        {
+            System.out.println("Critical Hit!");
+            return weaponDamage * 2;
+        }
+        else
+        {
+            return weaponDamage;
+        }
     }
 
-    // Uses a healing potion to restore random HP
+	// Uses a healing potion to restore random HP
     public void usePotion() {
 
         // Prevent potion use if none remain
